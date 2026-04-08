@@ -17,14 +17,7 @@ if not exist "%ROOT_DIR%env\Scripts\activate.bat" (
   exit /b 1
 )
 
-if not exist "%ROOT_DIR%frontend\package.json" (
-  echo [ERROR] Could not find frontend\package.json in "%ROOT_DIR%"
-  pause
-  exit /b 1
-)
-
 start "Saral Backend" cmd /k "cd /d ""%ROOT_DIR%"" && call ""%ROOT_DIR%env\Scripts\activate.bat"" && python app.py"
-start "Saral Frontend" cmd /k "cd /d ""%ROOT_DIR%frontend"" && npm run dev"
 
-echo Started backend and frontend in separate terminals.
+echo Started backend in a new terminal.
 endlocal

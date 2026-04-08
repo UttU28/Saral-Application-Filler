@@ -66,6 +66,6 @@ def update_env_file(ipv4):
 
 if __name__ == '__main__':
     ipv4 = get_ipv4_address()
-    update_env_file(ipv4)
+    # update_env_file(ipv4)
     print(f"Server is running on: http://{ipv4}:5000")
     app.run(host='0.0.0.0', port=5000)
