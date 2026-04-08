@@ -3,8 +3,7 @@ import { toast } from 'react-toastify';
 import { Button as ButtonType } from '../types/button';
 import { formatButtonText } from '../utils/textUtils';
 import { BUTTON_CONFIG } from '../config/buttonConfig';
-
-const baseURL = 'http://10.0.0.65:5000' ;
+import { baseURL } from '../config/api';
 
 interface ButtonProps {
   button: ButtonType;

@@ -8,6 +8,10 @@ app = Flask(__name__)
 
 CORS(app)
 
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({'status': 'ok'}), 200
+
 @app.route('/typeThis', methods=['POST'])
 def type_this():
     data = request.get_json()
